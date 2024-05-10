@@ -25,12 +25,12 @@
         <main>
             <section>
                 <h1>Add new entery</h1>
-                <form>
-                    <label for="title">Title:</label>
-                    <input type="text" id="title" name="title" required>
-                    <label for="content">Content:</label>
-                    <textarea id="content" name="content" required></textarea>
-                    <button type="submit">Create</button>
+                <form class="form" action="/entry" method="POST">
+                    <p class="form__input">
+                        <label class="form__label" for="entry">Entry contents</label>
+                        <textarea class="form__textarea" id="entry" name="content"></textarea>
+                    </p>
+                    <button type="submit" class="form__submit">Add entry</button>
                 </form>
             </section>
             <section>
