@@ -3,6 +3,7 @@
 .env
 /.venv
 /dev/*
+/.vscode
 # Logs and databases #
 ######################
 *.log
