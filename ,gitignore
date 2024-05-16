@@ -1,13 +1,18 @@
+# Ignore virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
 # My additions to basic Mac gitignore #
 #######################################
-.env
-/.venv
 /dev/*
 /.vscode
-/__pycache__
-/__pycache__/*
-/.pytest_cache
-/.idea
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+*.pyo
 # Logs and databases #
 ######################
 *.log
