@@ -4,7 +4,8 @@
 /.venv
 /dev/*
 /.vscode
-/__pycache__
+/__pycache__/*
+/.pytest_cache
 /.pytest_cache
 /.idea
 # Logs and databases #
