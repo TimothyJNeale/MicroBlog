@@ -1,7 +1,17 @@
 import datetime
 from flask import Flask, render_template, request
+from pymongo import MongoClient
+
+import os
+
+database = os.getenv('MICROBLOG_DATABASE')
+username = os.getenv('MICROBLOG_USERNAME')
+password = os.getenv('MICROBLOG_PASSWORD')
+
+connection_string = f"mongodb+srv://{username}:{password}@{database}.rk10zip.mongodb.net/"
 
 app = Flask(__name__)
+client = MongoClient(connection_string)
 
 entries = []
 
