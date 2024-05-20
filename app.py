@@ -8,7 +8,7 @@ database = os.getenv('MICROBLOG_DATABASE')
 username = os.getenv('MICROBLOG_USERNAME')
 password = os.getenv('MICROBLOG_PASSWORD')
 
-connection_string = f"mongodb+srv://{username}:{password}@{database}.rk10zip.mongodb.net/"
+connection_string = f"mongodb+srv://{username}:{password}@{database}.qvo1l4s.mongodb.net/"
 
 app = Flask(__name__)
 client = MongoClient(connection_string)
