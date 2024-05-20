@@ -12,11 +12,12 @@ connection_string = f"mongodb+srv://{username}:{password}@{database}.rk10zip.mon
 
 app = Flask(__name__)
 client = MongoClient(connection_string)
-
+app.db = client.microblog
 entries = []
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
+    print([e for e in app.db.entries.find({})])
     if request.method == 'POST':
         entry_content = request.form['content']
         formated_date = datetime.datetime.today().strftime('%Y-%m-%d')
