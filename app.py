@@ -1,18 +1,16 @@
 import datetime
-from flask import Flask, render_template, request
-from pymongo import MongoClient
-
 import os
 
-def create_app():
-    database = os.getenv('MICROBLOG_DATABASE')
-    username = os.getenv('MICROBLOG_USERNAME')
-    password = os.getenv('MICROBLOG_PASSWORD')
+from flask import Flask, render_template, request
+from pymongo import MongoClient
+from dotenv import load_dotenv
 
-    connection_string = f"mongodb+srv://{username}:{password}@{database}.qvo1l4s.mongodb.net/"
+load_dotenv()
+
+def create_app():
 
     app = Flask(__name__)
-    client = MongoClient(connection_string)
+    client = MongoClient(os.getenv("MONGODB_URI"))
     app.db = client.microblog
 
 
