@@ -8,7 +8,7 @@ venv.bak/
 # My additions to basic Mac gitignore #
 #######################################
 /dev/*
-/.vscode
+.vscode/
 # Ignore Python bytecode
 /__pycache__
 __pycache__/
